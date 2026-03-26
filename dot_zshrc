@@ -1,0 +1,39 @@
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/teddyg/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/teddyg/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/teddyg/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/teddyg/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+
+export PATH="$PATH:/Users/teddyg/development/flutter/bin"
+
+export EDITOR=vim
+
+alias fvim='vim $(fzf)'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="find -L -x * \( -name '.*' -o -xattrname com.apple.containermanager.uuid \) -prune -o -type f -print 2> /dev/null"
+export FZF_ALT_C_COMMAND="fd -t d -H -E 'Library' -E 'node_modules' -E '.git' . ~"
+
+setopt AUTO_MENU
+setopt LIST_PACKED
+
+alias antlr4='java -jar /Users/teddyg/Documents/CS/CS\ 4850/antlr-4.13.2-complete.jar'
+
+# Created by `pipx` on 2026-03-03 16:07:35
+export PATH="$PATH:/Users/teddyg/.local/bin"
+
+export PROMPT="%n@Macbook %~ %# "
