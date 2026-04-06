@@ -1,0 +1,10 @@
+syntax on
+filetype plugin indent on
+set relativenumber
+set number
+set mouse=a
+set smoothscroll
+set laststatus=2
+set statusline+=%F
+set clipboard^=unnamed
+set rtp+=/opt/homebrew/opt/fzf

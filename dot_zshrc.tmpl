@@ -35,5 +35,10 @@ alias antlr4='java -jar /Users/teddyg/Documents/CS/CS\ 4850/antlr-4.13.2-complet
 
 # Created by `pipx` on 2026-03-03 16:07:35
 export PATH="$PATH:/Users/teddyg/.local/bin"
-
+{{- if eq .chezmoi.hostname "Mac-mini" }}
+export PROMPT="%n@MacMini %~ %# "
+{{- else if eq .chezmoi.hostname "Theodores-Macbook-Air-515" }}
 export PROMPT="%n@Macbook %~ %# "
+{{- else }}
+export PROMPT="%n@%m %~ %# "
+{{- end }}
